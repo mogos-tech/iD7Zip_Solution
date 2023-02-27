@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "iD7Zip": {
+      "commandName": "Project",
+      "hotReloadEnabled": true
+    }
+  }
+}

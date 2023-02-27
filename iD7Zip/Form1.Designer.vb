@@ -43,10 +43,29 @@ Partial Class Form1
         OpenFileDialog1 = New OpenFileDialog()
         FolderBrowserDialog1 = New FolderBrowserDialog()
         HelpProvider1 = New HelpProvider()
+        MenuStrip1 = New MenuStrip()
+        FileToolStripMenuItem = New ToolStripMenuItem()
+        Set7zexePATHToolStripMenuItem = New ToolStripMenuItem()
+        SelectDirPATHToolStripMenuItem = New ToolStripMenuItem()
+        OpenDirPATHToolStripMenuItem = New ToolStripMenuItem()
+        ViewEnginecmdoutputlogToolStripMenuItem = New ToolStripMenuItem()
+        ExitToolStripMenuItem = New ToolStripMenuItem()
+        HelpToolStripMenuItem = New ToolStripMenuItem()
+        HowToToolStripMenuItem = New ToolStripMenuItem()
+        EnginebatToolStripMenuItem = New ToolStripMenuItem()
+        EnginecmdoutputlogToolStripMenuItem = New ToolStripMenuItem()
+        AboutToolStripMenuItem = New ToolStripMenuItem()
+        ID7ZipToolStripMenuItem = New ToolStripMenuItem()
+        ZipToolStripMenuItem = New ToolStripMenuItem()
+        WteeToolStripMenuItem = New ToolStripMenuItem()
+        CopyrightToolStripMenuItem = New ToolStripMenuItem()
+        LICENSEToolStripMenuItem = New ToolStripMenuItem()
+        Httpswwwgnuorglicensesoldlicenseslgpl21enhtmlToolStripMenuItem = New ToolStripMenuItem()
         GroupBox1.SuspendLayout()
         GroupBox2.SuspendLayout()
         GroupBox4.SuspendLayout()
         GroupBox5.SuspendLayout()
+        MenuStrip1.SuspendLayout()
         SuspendLayout()
         ' 
         ' GroupBox1
@@ -54,7 +73,7 @@ Partial Class Form1
         GroupBox1.Controls.Add(Button1)
         GroupBox1.Controls.Add(TextBox1)
         GroupBox1.Controls.Add(Label1)
-        GroupBox1.Location = New Point(12, 12)
+        GroupBox1.Location = New Point(12, 27)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Size = New Size(776, 102)
         GroupBox1.TabIndex = 0
@@ -90,7 +109,7 @@ Partial Class Form1
         GroupBox2.Controls.Add(Button2)
         GroupBox2.Controls.Add(TextBox2)
         GroupBox2.Controls.Add(Label2)
-        GroupBox2.Location = New Point(12, 120)
+        GroupBox2.Location = New Point(12, 135)
         GroupBox2.Name = "GroupBox2"
         GroupBox2.Size = New Size(776, 102)
         GroupBox2.TabIndex = 1
@@ -129,7 +148,7 @@ Partial Class Form1
         GroupBox4.Controls.Add(LinkLabel3)
         GroupBox4.Controls.Add(LinkLabel2)
         GroupBox4.Controls.Add(LinkLabel1)
-        GroupBox4.Location = New Point(12, 228)
+        GroupBox4.Location = New Point(12, 243)
         GroupBox4.Name = "GroupBox4"
         GroupBox4.Size = New Size(385, 102)
         GroupBox4.TabIndex = 3
@@ -140,10 +159,10 @@ Partial Class Form1
         LinkLabel4.AutoSize = True
         LinkLabel4.Location = New Point(7, 68)
         LinkLabel4.Name = "LinkLabel4"
-        LinkLabel4.Size = New Size(66, 15)
+        LinkLabel4.Size = New Size(307, 15)
         LinkLabel4.TabIndex = 3
         LinkLabel4.TabStop = True
-        LinkLabel4.Text = "github ###"' 
+        LinkLabel4.Text = "https://github.com/ZHDJ85ZUBPBG3H8/iD7Zip_Solution"' 
         ' LinkLabel3
         ' 
         LinkLabel3.AutoSize = True
@@ -177,7 +196,7 @@ Partial Class Form1
         GroupBox5.Controls.Add(Button5)
         GroupBox5.Controls.Add(Button4)
         GroupBox5.Controls.Add(Button3)
-        GroupBox5.Location = New Point(403, 228)
+        GroupBox5.Location = New Point(403, 243)
         GroupBox5.Name = "GroupBox5"
         GroupBox5.Size = New Size(385, 102)
         GroupBox5.TabIndex = 4
@@ -185,6 +204,7 @@ Partial Class Form1
         GroupBox5.Text = "Engine"' 
         ' Button6
         ' 
+        Button6.Enabled = False
         Button6.Location = New Point(201, 43)
         Button6.Name = "Button6"
         Button6.Size = New Size(97, 23)
@@ -221,18 +241,117 @@ Partial Class Form1
         ' 
         ' OpenFileDialog1
         ' 
-        OpenFileDialog1.FileName = "OpenFileDialog1"' 
+        OpenFileDialog1.FileName = "7z.exe"' 
+        ' MenuStrip1
+        ' 
+        MenuStrip1.Items.AddRange(New ToolStripItem() {FileToolStripMenuItem, HelpToolStripMenuItem, AboutToolStripMenuItem})
+        MenuStrip1.Location = New Point(0, 0)
+        MenuStrip1.Name = "MenuStrip1"
+        MenuStrip1.Size = New Size(799, 24)
+        MenuStrip1.TabIndex = 5
+        MenuStrip1.Text = "MenuStrip1"' 
+        ' FileToolStripMenuItem
+        ' 
+        FileToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {Set7zexePATHToolStripMenuItem, SelectDirPATHToolStripMenuItem, OpenDirPATHToolStripMenuItem, ViewEnginecmdoutputlogToolStripMenuItem, ExitToolStripMenuItem})
+        FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        FileToolStripMenuItem.Size = New Size(37, 20)
+        FileToolStripMenuItem.Text = "File"' 
+        ' Set7zexePATHToolStripMenuItem
+        ' 
+        Set7zexePATHToolStripMenuItem.Name = "Set7zexePATHToolStripMenuItem"
+        Set7zexePATHToolStripMenuItem.Size = New Size(228, 22)
+        Set7zexePATHToolStripMenuItem.Text = "Set 7z.exe PATH"' 
+        ' SelectDirPATHToolStripMenuItem
+        ' 
+        SelectDirPATHToolStripMenuItem.Name = "SelectDirPATHToolStripMenuItem"
+        SelectDirPATHToolStripMenuItem.Size = New Size(228, 22)
+        SelectDirPATHToolStripMenuItem.Text = "Select Dir. PATH"' 
+        ' OpenDirPATHToolStripMenuItem
+        ' 
+        OpenDirPATHToolStripMenuItem.Name = "OpenDirPATHToolStripMenuItem"
+        OpenDirPATHToolStripMenuItem.Size = New Size(228, 22)
+        OpenDirPATHToolStripMenuItem.Text = "Open Dir. PATH"' 
+        ' ViewEnginecmdoutputlogToolStripMenuItem
+        ' 
+        ViewEnginecmdoutputlogToolStripMenuItem.Name = "ViewEnginecmdoutputlogToolStripMenuItem"
+        ViewEnginecmdoutputlogToolStripMenuItem.Size = New Size(228, 22)
+        ViewEnginecmdoutputlogToolStripMenuItem.Text = "View engine_cmd_output.log"' 
+        ' ExitToolStripMenuItem
+        ' 
+        ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        ExitToolStripMenuItem.Size = New Size(228, 22)
+        ExitToolStripMenuItem.Text = "Exit"' 
+        ' HelpToolStripMenuItem
+        ' 
+        HelpToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {HowToToolStripMenuItem, EnginebatToolStripMenuItem, EnginecmdoutputlogToolStripMenuItem})
+        HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        HelpToolStripMenuItem.Size = New Size(44, 20)
+        HelpToolStripMenuItem.Text = "Help"' 
+        ' HowToToolStripMenuItem
+        ' 
+        HowToToolStripMenuItem.Name = "HowToToolStripMenuItem"
+        HowToToolStripMenuItem.Size = New Size(266, 22)
+        HowToToolStripMenuItem.Text = "How To Guide"' 
+        ' EnginebatToolStripMenuItem
+        ' 
+        EnginebatToolStripMenuItem.Name = "EnginebatToolStripMenuItem"
+        EnginebatToolStripMenuItem.Size = New Size(266, 22)
+        EnginebatToolStripMenuItem.Text = "engine.bat Information"' 
+        ' EnginecmdoutputlogToolStripMenuItem
+        ' 
+        EnginecmdoutputlogToolStripMenuItem.Name = "EnginecmdoutputlogToolStripMenuItem"
+        EnginecmdoutputlogToolStripMenuItem.Size = New Size(266, 22)
+        EnginecmdoutputlogToolStripMenuItem.Text = "engine_cmd_output.log Information"' 
+        ' AboutToolStripMenuItem
+        ' 
+        AboutToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ID7ZipToolStripMenuItem, ZipToolStripMenuItem, WteeToolStripMenuItem, CopyrightToolStripMenuItem})
+        AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+        AboutToolStripMenuItem.Size = New Size(52, 20)
+        AboutToolStripMenuItem.Text = "About"' 
+        ' ID7ZipToolStripMenuItem
+        ' 
+        ID7ZipToolStripMenuItem.Name = "ID7ZipToolStripMenuItem"
+        ID7ZipToolStripMenuItem.Size = New Size(113, 22)
+        ID7ZipToolStripMenuItem.Text = "iD7Zip"' 
+        ' ZipToolStripMenuItem
+        ' 
+        ZipToolStripMenuItem.Name = "ZipToolStripMenuItem"
+        ZipToolStripMenuItem.Size = New Size(113, 22)
+        ZipToolStripMenuItem.Text = "7-Zip"' 
+        ' WteeToolStripMenuItem
+        ' 
+        WteeToolStripMenuItem.Name = "WteeToolStripMenuItem"
+        WteeToolStripMenuItem.Size = New Size(113, 22)
+        WteeToolStripMenuItem.Text = "wintee"' 
+        ' CopyrightToolStripMenuItem
+        ' 
+        CopyrightToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {LICENSEToolStripMenuItem, Httpswwwgnuorglicensesoldlicenseslgpl21enhtmlToolStripMenuItem})
+        CopyrightToolStripMenuItem.Name = "CopyrightToolStripMenuItem"
+        CopyrightToolStripMenuItem.Size = New Size(113, 22)
+        CopyrightToolStripMenuItem.Text = "License"' 
+        ' LICENSEToolStripMenuItem
+        ' 
+        LICENSEToolStripMenuItem.Name = "LICENSEToolStripMenuItem"
+        LICENSEToolStripMenuItem.Size = New Size(389, 22)
+        LICENSEToolStripMenuItem.Text = "LICENSE"' 
+        ' Httpswwwgnuorglicensesoldlicenseslgpl21enhtmlToolStripMenuItem
+        ' 
+        Httpswwwgnuorglicensesoldlicenseslgpl21enhtmlToolStripMenuItem.Name = "Httpswwwgnuorglicensesoldlicenseslgpl21enhtmlToolStripMenuItem"
+        Httpswwwgnuorglicensesoldlicenseslgpl21enhtmlToolStripMenuItem.Size = New Size(389, 22)
+        Httpswwwgnuorglicensesoldlicenseslgpl21enhtmlToolStripMenuItem.Text = "https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html"' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 348)
+        ClientSize = New Size(799, 355)
         Controls.Add(GroupBox5)
         Controls.Add(GroupBox4)
         Controls.Add(GroupBox2)
         Controls.Add(GroupBox1)
+        Controls.Add(MenuStrip1)
         FormBorderStyle = FormBorderStyle.Fixed3D
         HelpButton = True
+        MainMenuStrip = MenuStrip1
         MaximizeBox = False
         MinimizeBox = False
         Name = "Form1"
@@ -244,7 +363,10 @@ Partial Class Form1
         GroupBox4.ResumeLayout(False)
         GroupBox4.PerformLayout()
         GroupBox5.ResumeLayout(False)
+        MenuStrip1.ResumeLayout(False)
+        MenuStrip1.PerformLayout()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
@@ -268,4 +390,22 @@ Partial Class Form1
     Friend WithEvents LinkLabel3 As LinkLabel
     Friend WithEvents HelpProvider1 As HelpProvider
     Friend WithEvents Button6 As Button
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Set7zexePATHToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SelectDirPATHToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OpenDirPATHToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HowToToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ID7ZipToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ZipToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CopyrightToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EnginebatToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ViewEnginecmdoutputlogToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EnginecmdoutputlogToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LICENSEToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Httpswwwgnuorglicensesoldlicenseslgpl21enhtmlToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents WteeToolStripMenuItem As ToolStripMenuItem
 End Class

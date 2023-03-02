@@ -48,22 +48,6 @@ engine.bat is the main "engine" of iD7Zip application.
 engine.bat calls 7z.exe (7-Zip https://www.7-zip.org/) file archiving process of the selected main Dir. (Folder Select UI section), via command line,
 and after completion, it will generate , using wintee.exe (https://code.google.com/archive/p/wintee/), a .log file called engine_cmd_output.log and the .zip archive files.
 
-BATCH SCRIPT (example for 7-Zip x86):
-
-@echo off
-cls()
-: begin()
-@echo ***************************************************************************************** 
-@echo                       engine.bat RUNNING! Please wait...                                  
-@echo  *****************************************************************************************
-set UserDirectoryPath=...
-cd %UserDirectoryPath%
-for /d %%X in (*) do "%ProgramFiles(x86)%"\7-Zip\7z.exe a "%%X.zip" "%%X"
-@echo ***************************************************************************************** 
-@echo                       engine.bat DONE!                                                    
-@echo ***************************************************************************************** 
-@pause
-
 ****************************************************
        engine_cmd_output.log Information
 ****************************************************

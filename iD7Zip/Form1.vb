@@ -190,6 +190,6 @@
     End Sub
 
     Private Sub LinkLabel4_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel4.LinkClicked
-        System.Diagnostics.Process.Start(New ProcessStartInfo("cmd", $"/c start microsoft-edge:https://github.com/ZHDJ85ZUBPBG3H8/iD7Zip_Solution"))
+        System.Diagnostics.Process.Start(New ProcessStartInfo("cmd", $"/c start microsoft-edge:https://github.com/mogos-tech/iD7Zip_Solution"))
     End Sub
 End Class

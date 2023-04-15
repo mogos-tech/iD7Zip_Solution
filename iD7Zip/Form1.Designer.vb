@@ -159,10 +159,10 @@ Partial Class Form1
         LinkLabel4.AutoSize = True
         LinkLabel4.Location = New Point(7, 68)
         LinkLabel4.Name = "LinkLabel4"
-        LinkLabel4.Size = New Size(307, 15)
+        LinkLabel4.Size = New Size(267, 15)
         LinkLabel4.TabIndex = 3
         LinkLabel4.TabStop = True
-        LinkLabel4.Text = "https://github.com/ZHDJ85ZUBPBG3H8/iD7Zip_Solution"' 
+        LinkLabel4.Text = "https://github.com/mogos-tech/iD7Zip_Solution"' 
         ' LinkLabel3
         ' 
         LinkLabel3.AutoSize = True
